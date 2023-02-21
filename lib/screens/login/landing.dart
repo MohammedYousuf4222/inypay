@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:inypay/screens/home/home_controller.dart';
+import 'package:inypay/screens/login/verification.dart';
 import 'package:inypay/utils/string_resource.dart';
 import 'package:inypay/widgets/button/secondary_button.dart';
 import 'package:inypay/widgets/custom_text.dart';
@@ -107,7 +110,9 @@ class _LandingState extends State<Landing> {
                     const SizedBox(
                       height: 16,
                     ),
-                    SecondaryButton(StringResource.mobile, onClick: () {}),
+                    SecondaryButton(StringResource.mobile, onClick: () {
+                      Get.to(() => const Verification());
+                    }),
                     const SizedBox(
                       height: 16,
                     ),

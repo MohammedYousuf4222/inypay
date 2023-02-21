@@ -4,6 +4,7 @@ import 'package:percent_indicator/circular_percent_indicator.dart';
 import '../../utils/color_resource.dart';
 import '../../utils/image_resource.dart';
 import '../../utils/string_resource.dart';
+import '../../widgets/custom_apbar.dart';
 import '../../widgets/custom_text.dart';
 import '../../widgets/textfield.dart';
 
@@ -26,40 +27,7 @@ class _OtpScreenState extends State<OtpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.topRight,
-              colors: <Color>[
-                Colorresource.color06E305,
-                Colorresource.color00ACE1,
-                Colorresource.color06E305,
-              ],
-            ),
-          ),
-        ),
-        title: Row(
-          children: [
-            Image.asset(
-              Imageresource.backArrow,
-              width: 36,
-              height: 36,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            CustomText(StringResource.otp),
-          ],
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: _progressindicator(),
-          )
-        ],
-      ),
+      appBar: CustomAppBar(StringResource.otp),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

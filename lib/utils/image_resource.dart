@@ -15,4 +15,5 @@ class Imageresource {
   static const String valletImage = "assets/images/vallet.png";
   static const String countryImage = "assets/images/countiers.png";
   static const String timerImage = "assets/images/timer.png";
+  static const String helicopterImage = "assets/images/aeroplane.png";
 }

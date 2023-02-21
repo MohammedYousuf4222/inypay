@@ -91,7 +91,7 @@ class _VerificationState extends State<Verification> {
             Container(
               margin: const EdgeInsets.symmetric(vertical: 300),
               width: double.infinity,
-              height: 248,
+              height: 300,
               color: Colorresource.white,
               child: Padding(
                 padding: const EdgeInsets.symmetric(vertical: 48),

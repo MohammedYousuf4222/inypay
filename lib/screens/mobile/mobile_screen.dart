@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:inypay/widgets/button/primary_button.dart';
+import 'package:inypay/widgets/custom_apbar.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 
 import '../../utils/color_resource.dart';
@@ -29,42 +30,7 @@ class _MobileScreenState extends State<MobileScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        flexibleSpace: Container(
-          decoration: const BoxDecoration(
-            gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.topRight,
-              colors: <Color>[
-                Colorresource.color06E305,
-                Colorresource.color00ACE1,
-                Colorresource.color06E305,
-              ],
-            ),
-          ),
-        ),
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Image.asset(
-              Imageresource.backArrow,
-              width: 36,
-              height: 36,
-            ),
-            const SizedBox(
-              width: 10,
-            ),
-            CustomText(StringResource.pins),
-            // const _progressindicator()
-          ],
-        ),
-        actions: const [
-          Padding(
-            padding: EdgeInsets.only(right: 10),
-            child: _progressindicator(),
-          )
-        ],
-      ),
+      appBar: CustomAppBar(StringResource.mobile),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(

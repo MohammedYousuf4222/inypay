@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:inypay/screens/course/course_screen.dart';
 import 'package:inypay/screens/login/landing.dart';
 import 'package:inypay/screens/login/login_face.dart';
 import 'package:inypay/screens/login/verification.dart';
@@ -70,7 +71,7 @@ class _BottomBar extends State<BottomBar> {
 
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
-    LoginFace(),
+    CourseScreen(),
     Landing(),
     Verification(),
     OtpScreen(),
